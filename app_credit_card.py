@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOMOAtBrO0Yh3fpKm3E9wOB",
+      "authorship_tag": "ABX9TyMIHl3Cep/iMfUrOZscSIQ2",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -76,7 +76,7 @@
         "            st.dataframe(data.head())\n",
         "\n",
         "            # Standard scale Time and Amount\n",
-        "            data[['Time', 'Amount']] = scaler.fit_transform(data[['Time', 'Amount']])\n",
+        "            data[['Time', 'Amount']] = scaler.transform(data[['Time', 'Amount']])\n",
         "\n",
         "            # Predict\n",
         "            if st.button(\"Predict\"):\n",
@@ -90,8 +90,8 @@
         "else:\n",
         "    st.subheader(\"Enter Transaction Details\")\n",
         "\n",
-        "    time = st.number_input(\"Time\", min_value=0.0, value=1000.0)\n",
-        "    amount = st.number_input(\"Amount\", min_value=0.0, value=50.0)\n",
+        "    time = st.number_input(\"Time\", min_value=0.0, value=172792.0)\n",
+        "    amount = st.number_input(\"Amount\", min_value=0.0, value=50000.0)\n",
         "\n",
         "    v_features = {}\n",
         "    for i in range(1, 29):\n",
@@ -101,7 +101,7 @@
         "    input_data = pd.DataFrame([{\"Time\": time, **v_features, \"Amount\": amount}])\n",
         "\n",
         "    # Apply standard scaling to Time and Amount\n",
-        "    input_data[['Time', 'Amount']] = scaler.fit_transform(input_data[['Time', 'Amount']])\n",
+        "    input_data[['Time', 'Amount']] = scaler.transform(input_data[['Time', 'Amount']])\n",
         "\n",
         "    st.write(\"Input Summary:\")\n",
         "    st.dataframe(input_data)\n",
@@ -113,7 +113,8 @@
         "        else:\n",
         "            st.success(\"✅ Legitimate Transaction\")\n",
         "\n",
-        "st.caption(\"Note: Model uses 30 input columns (Time, V1–V28, Amount). 'Class' is the predicted output.\")\n",
+        "st.markdown(\"**Note:** Model uses 30 input columns — `Time`, `V1–V28`, and `Amount`. The app predicts the `Class` output (0 = Legitimate, 1 = Fraud).\")\n",
+        "\n",
         "\n",
         "\n"
       ]

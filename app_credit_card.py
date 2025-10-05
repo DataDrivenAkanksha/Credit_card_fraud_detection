@@ -1,39 +1,3 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyO80kEH59aXV0aDJsHFLYni",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/DataDrivenAkanksha/Credit_card_fraud_detection/blob/main/app_credit_card.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "id": "9U6A6dXEk0S1"
-      },
-      "outputs": [],
-      "source": [
         "import streamlit as st\n",
         "import pandas as pd\n",
         "import numpy as np\n",
@@ -113,11 +77,4 @@
         "        else:\n",
         "            st.success(\"✅ Legitimate Transaction\")\n",
         "\n",
-        "st.markdown(\"**Note:** Model uses 30 input columns — `Time`, `V1–V28`, and `Amount`. The app predicts the `Class` output (0 = Legitimate, 1 = Fraud).\")\n",
-        "\n",
-        "\n",
-        "\n"
-      ]
-    }
-  ]
-}
+        "st.markdown(\"**Note:** Model uses 30 input columns — `Time`, `V1–V28`, and `Amount`. The app predicts the `Class` output (0 = Legitimate, 1 = Fraud).\")\n"

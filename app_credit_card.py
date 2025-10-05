@@ -14,7 +14,7 @@ st.write("This app predicts whether a credit card transaction is **fraudulent or
 
 # Load Model
 
-model = joblib.load("random_forest.pkl")
+model = joblib.load("random_forest_credit.pkl")
 
 # Input Method Selection
 

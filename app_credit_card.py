@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyMIHl3Cep/iMfUrOZscSIQ2",
+      "authorship_tag": "ABX9TyO80kEH59aXV0aDJsHFLYni",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -42,7 +42,7 @@
         "\n",
         "\n",
         "#Title\n",
-        "st.set_page_config(page_title=\"Credit Card Fraud Detection\", layout=\"centered\")\n",
+        "st.set_page_config(page_title=\"Credit Card Fraud Detection\", layout=\"centered\",innclude_colab_link=True)\n",
         "\n",
         "st.title(\"💳 Credit Card Fraud Detection App\")\n",
         "st.write(\"This app predicts whether a credit card transaction is **fraudulent or genuine** using 30 numerical features.\")\n",

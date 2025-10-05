@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 #Title
-st.set_page_config(page_title="Credit Card Fraud Detection", layout="centered",innclude_colab_link=True)
+st.set_page_config(page_title="Credit Card Fraud Detection", layout="centered")
 
 st.title("💳 Credit Card Fraud Detection App")
 st.write("This app predicts whether a credit card transaction is **fraudulent or genuine** using 30 numerical features.")
